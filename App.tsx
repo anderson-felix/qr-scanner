@@ -1,27 +1,31 @@
-/* eslint-disable react-native/no-inline-styles */
-
 import React, { useCallback, useState } from "react";
-import {
-  SafeAreaView,
-  Alert,
-  View,
-  StatusBar,
-  ViewStyle,
-  Text,
-} from "react-native";
+import { StatusBar, ViewStyle } from "react-native";
 import { RNCamera } from "react-native-camera";
+import IonIcons from "react-native-vector-icons/Ionicons";
+import MCIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { SvgCssUri } from "react-native-svg";
+
 import {
   ConfirmContainer,
   ConfirmButton,
   QRSection,
   QRData,
+  SimpleButton,
+  ButtonArea,
+  Message,
+  SafeArea,
+  SvgArea,
 } from "./app.styles";
 
-import { PrimaryButton } from "./src/components/Buttons/PrimaryButton";
-
 const RNCameraStyle = {
-  height: "100%",
+  height: "50%",
   flexDirection: "row",
+  maxHeight: 500,
+  maxWidth: 500,
+  overflow: "hidden",
+  borderWidth: 3,
+  borderStyle: "dashed",
+  borderColor: "#fff",
 } as ViewStyle;
 
 const App = () => {
@@ -37,25 +41,17 @@ const App = () => {
 
   return (
     <>
-      <StatusBar barStyle="light-content" />
-      <SafeAreaView style={{ flex: 1 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <PrimaryButton
-            disabled={!cameraOrientation}
-            onPress={() => cameraOrientation && setFlashMode(!flashMode)}
-            text={`${flashMode ? "Desligar" : "Ligar"} flash`}
-          />
-          <View style={{ width: 3, backgroundColor: "#336633" }} />
-          <PrimaryButton
-            onPress={() => setCameraOrientation(!cameraOrientation)}
-            text={`Câmera ${cameraOrientation ? "frontal" : "traseira"}`}
-          />
-        </View>
+      <StatusBar barStyle="dark-content" />
+
+      <SvgArea>
+        <SvgCssUri
+          width="200"
+          height="200"
+          uri="https://picode-public.s3.amazonaws.com/picode-logo.svg"
+        />
+      </SvgArea>
+      <SafeArea>
+        <Message>Escaneie o código QR</Message>
         <RNCamera
           style={RNCameraStyle}
           onBarCodeRead={({ data }) => !read && onScan(data)}
@@ -64,7 +60,22 @@ const App = () => {
           type={cameraOrientation === true ? "back" : "front"}
           flashMode={flashMode === true ? "torch" : "off"}
         />
-      </SafeAreaView>
+      </SafeArea>
+
+      <ButtonArea>
+        <SimpleButton
+          onPress={() => cameraOrientation && setFlashMode(!flashMode)}
+        >
+          {flashMode ? (
+            <MCIcons name="flash-off" size={50} color="#fff" />
+          ) : (
+            <MCIcons name="flash" size={50} color="#fff" />
+          )}
+        </SimpleButton>
+        <SimpleButton onPress={() => setCameraOrientation(!cameraOrientation)}>
+          <IonIcons name="camera-reverse" size={50} color="#fff" />
+        </SimpleButton>
+      </ButtonArea>
       {read && (
         <QRSection>
           <QRData>{QRCode}</QRData>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/anderson/dev/personal/rn-qr_scanner/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
+            "outputFile": "/home/anderson/dev/personal/qr-scanner/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/home/anderson/.gradle/caches/transforms-3/dae511b76fc5abe0b43b7dfd722fa90e/transformed/jetified-play-services-base-17.6.0/res/values-sl/values.xml",

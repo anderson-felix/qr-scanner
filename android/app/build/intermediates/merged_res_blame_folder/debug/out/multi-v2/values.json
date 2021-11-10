@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/anderson/dev/personal/rn-qr_scanner/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/anderson/dev/personal/qr-scanner/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/anderson/.gradle/caches/transforms-3/945f679d5066ec5cea4c418de5c0d6c7/transformed/media-1.0.0/res/values/values.xml",
@@ -184,7 +184,41 @@
                     }
                 },
                 {
-                    "source": "/home/anderson/dev/personal/rn-qr_scanner/node_modules/react-native-camera/android/build/intermediates/packaged_res/general/debug/values/values.xml",
+                    "source": "/home/anderson/dev/personal/qr-scanner/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "156,262",
+                        "endColumns": "63,68",
+                        "endOffsets": "215,326"
+                    },
+                    "to": {
+                        "startLines": "294,295",
+                        "startColumns": "4,4",
+                        "startOffsets": "19022,19086",
+                        "endColumns": "63,68",
+                        "endOffsets": "19081,19150"
+                    }
+                },
+                {
+                    "source": "/home/anderson/dev/personal/qr-scanner/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "47",
+                        "endOffsets": "59"
+                    },
+                    "to": {
+                        "startLines": "325",
+                        "startColumns": "4",
+                        "startOffsets": "21164",
+                        "endColumns": "47",
+                        "endOffsets": "21207"
+                    }
+                },
+                {
+                    "source": "/home/anderson/dev/personal/qr-scanner/node_modules/react-native-camera/android/build/intermediates/packaged_res/general/debug/values/values.xml",
                     "from": {
                         "startLines": "2,9",
                         "startColumns": "4,4",
@@ -200,23 +234,6 @@
                         "endLines": "2046,2839",
                         "endColumns": "12,24",
                         "endOffsets": "140525,183434"
-                    }
-                },
-                {
-                    "source": "/home/anderson/dev/personal/rn-qr_scanner/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "47",
-                        "endOffsets": "59"
-                    },
-                    "to": {
-                        "startLines": "325",
-                        "startColumns": "4",
-                        "startOffsets": "21164",
-                        "endColumns": "47",
-                        "endOffsets": "21207"
                     }
                 },
                 {
@@ -277,7 +294,7 @@
                     }
                 },
                 {
-                    "source": "/home/anderson/dev/personal/rn-qr_scanner/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/anderson/dev/personal/qr-scanner/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -329,23 +346,6 @@
                         "startOffsets": "16970,17039",
                         "endColumns": "68,56",
                         "endOffsets": "17034,17091"
-                    }
-                },
-                {
-                    "source": "/home/anderson/dev/personal/rn-qr_scanner/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "156,262",
-                        "endColumns": "63,68",
-                        "endOffsets": "215,326"
-                    },
-                    "to": {
-                        "startLines": "294,295",
-                        "startColumns": "4,4",
-                        "startOffsets": "19022,19086",
-                        "endColumns": "63,68",
-                        "endOffsets": "19081,19150"
                     }
                 }
             ]
