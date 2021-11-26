@@ -1,20 +1,26 @@
 import styled from "styled-components/native";
 
-interface ButtonProps {
+interface ContentProps {
   disabled: boolean | undefined;
+  backgroundColor?: string;
 }
 
-export const Content = styled.Text<ButtonProps>`
-  color: ${(props) => (props.disabled ? "#a5a58d" : "#336633")};
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  justify-content: center;
-  align-self: center;
+export const Button = styled.Text`
+  font-size: 20px;
+  font-family: "Nunito-Bold";
+  color: #fff;
 `;
 
-export const Touchable = styled.TouchableOpacity`
-  flex: 1;
-  background-color: #fff;
-  padding: 10px 0;
+export const Touchable = styled.TouchableHighlight`
+  max-width: 150px;
+  border-radius: 10px;
+`;
+
+export const Content = styled.View<ContentProps>`
+  color: ${(props) => (props.disabled ? "#a5a58d" : "#fff")};
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.backgroundColor || "#6699FF"};
+  border-radius: 10px;
+  padding: 10px 20px;
 `;
